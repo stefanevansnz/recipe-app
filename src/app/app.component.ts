@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,4 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  @Input() selectedHeading = 'recipes';
+
+  onNavigate(heading: string) {
+    //console.log('onNavigate = ' + heading);
+    this.selectedHeading = heading;
+  }
+
 }
